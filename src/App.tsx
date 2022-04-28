@@ -1,8 +1,13 @@
-import React from 'react';
+// import {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // const [number, setNumber] = useState(5)
+
+  // const changeNumber=()=>{
+  //   setNumber(15)
+  // }
   return (
     <div className="App">
       <header className="App-header">
