@@ -1,12 +1,8 @@
 import React from 'react';
+import { IState as Props } from '../App';
 
 interface IProps {
-  people: {
-    name: string;
-    age: number;
-    url: string;
-    note?: string;
-  }[];
+  people: Props['people'];
 }
 
 const List: React.FC<IProps> = ({ people }) => {
@@ -15,7 +11,7 @@ const List: React.FC<IProps> = ({ people }) => {
       return (
         <li className='List'>
           <div className='List-header'>
-            <img className='List-img' src={person.url} />
+            <img className='List-img' src={person.img} />
             <h2>{person.name}</h2>
           </div>
           <p>{person.age} years old</p>
@@ -24,6 +20,7 @@ const List: React.FC<IProps> = ({ people }) => {
       );
     });
   };
+
   return <ul>{renderList()}</ul>;
 };
 
